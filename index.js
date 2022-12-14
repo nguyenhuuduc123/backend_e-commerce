@@ -8,6 +8,7 @@ const productRouter = require('./routes/productRoute');
 const blogRouter = require('./routes/blogRoute');
 const categoryRouter = require('./routes/productCategoryRoute');
 const blogcategoryRouter = require('./routes/blogCategoryRoute');
+const couponRoute = require('./routes/couponRoute');
 const brandRouter = require('./routes/brandRoute');
 const dotenv = require('dotenv').config();
 const cookieParser = require('cookie-parser');
@@ -26,6 +27,7 @@ app.use('/api/blog',blogRouter)
 app.use('/api/category',categoryRouter)
 app.use('/api/blogcategory',blogcategoryRouter)
 app.use('/api/brand',brandRouter)
+app.use('/api/coupon',couponRoute)
 app.use(notFound);
 app.use(errorHandler);
 app.listen(PORT,()=> {
